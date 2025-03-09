@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - JEE Mentorship Program</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <style>
+        .register-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(58, 12, 163, 0.1));
+            padding: 3rem 0;
+        }
+        
+        .register-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .register-card .card-header {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border: none;
+        }
+        
+        .register-card .card-body {
+            padding: 3rem;
+        }
+        
+        .register-card .form-control {
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: none;
+            margin-bottom: 1.5rem;
+            padding-left: 45px;
+            border: 1px solid #e1e5ea;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+        
+        .register-card .form-control:focus {
+            background-color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
+        }
+        
+        .register-card .input-group-text {
+            position: absolute;
+            left: 15px;
+            top: 17px;
+            z-index: 10;
+            background: transparent;
+            border: none;
+            color: #6c757d;
+        }
+        
+        .register-card .form-floating label {
+            padding-left: 45px;
+        }
+        
+        .register-card .btn-primary {
+            height: 50px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+        }
+        
+        .register-card .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .register-card .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        
+        .register-card .divider::before,
+        .register-card .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #e1e5ea;
+        }
+        
+        .register-card .divider span {
+            padding: 0 1rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .social-register .btn {
+            border-radius: 10px;
+            height: 45px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .social-register .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .register-footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #6c757d;
+        }
+        
+        .register-footer a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .register-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .register-image {
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            min-height: 100%;
+        }
+        
+        .register-image img {
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .benefits-list {
+            margin-top: 2rem;
+        }
+        
+        .benefits-list .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .benefits-list .benefit-icon {
+            width: 30px;
+            height: 30px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 991.98px) {
+            .register-image {
+                display: none;
+            }
+            
+            .register-card .card-body {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.svg" alt="JEE Mentorship Logo" height="40" class="d-inline-block align-text-top me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Success Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success ms-lg-2 px-3 active" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-lg-2 px-3" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="register-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card register-card">
+                        <div class="row g-0">
+                            <div class="col-lg-7">
+                                <div class="card-body">
+                                    <h2 class="text-center mb-4 fw-bold">Create Your Account</h2>
+                                    <p class="text-center text-muted mb-4">Join our JEE mentorship program and start your journey to success</p>
+                                    
+                                    <form id="registrationForm" onsubmit="return handleRegistration(event)">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="position-relative mb-4">
+                                                    <span class="input-group-text">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="position-relative mb-4">
+                                                    <span class="input-group-text">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="position-relative mb-4">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                        </div>
+                                        
+                                        <div class="position-relative mb-4">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-phone"></i>
+                                            </span>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                        </div>
+                                        
+                                        <div class="position-relative mb-4">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                        </div>
+                                        
+                                        <div class="position-relative mb-4">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                                <label class="form-check-label" for="termsCheck">
+                                                    I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                                    </form>
+                                    
+                                    <div class="divider">
+                                        <span>OR</span>
+                                    </div>
+                                    
+                                    <div class="social-register">
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <a href="#" class="btn btn-outline-primary w-100">
+                                                    <i class="fab fa-google me-2"></i> Google
+                                                </a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="#" class="btn btn-outline-primary w-100">
+                                                    <i class="fab fa-facebook-f me-2"></i> Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="register-footer">
+                                        <p>Already have an account? <a href="login.html">Log In</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 register-image">
+                                <div>
+                                    <img src="../images/register-image.jpg" alt="JEE Mentorship" class="img-fluid mb-4">
+                                    
+                                    <div class="benefits-list text-white">
+                                        <h4 class="mb-3">Benefits of Joining:</h4>
+                                        
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Expert Mentorship</h6>
+                                                <small>Learn from experienced JEE mentors</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Structured Learning</h6>
+                                                <small>Follow a well-designed curriculum</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Personalized Attention</h6>
+                                                <small>Small batch sizes for better interaction</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="benefit-item">
+                                            <div class="benefit-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">24/7 Doubt Resolution</h6>
+                                                <small>Get your doubts cleared anytime</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="../images/logo.svg" alt="JEE Mentorship Logo" height="40" class="mb-3">
+                    <p>Empowering students to achieve their dreams through quality education and personalized mentorship.</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Success Stories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Free Resources</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">JEE Updates</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Knowledge City, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@jeementorship.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 JEE Mentorship. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle" class="btn btn-sm rounded-circle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+</body>
+</html> 

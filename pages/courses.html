@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - JEE Mentorship Program</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.jpg" alt="JEE Mentorship Logo" height="40" class="d-inline-block align-text-top me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Success Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success ms-lg-2 px-3" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-lg-2 px-3" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header Section -->
+    <header class="course-header py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Our JEE Mentorship Programs</h1>
+                    <p class="lead mb-4">Choose the perfect mentorship program tailored to your preparation level and goals.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="special-offer-card bg-white text-dark p-4 rounded shadow">
+                        <h3 class="text-primary mb-3">Special Offer!</h3>
+                        <p class="mb-2">Early Bird Discount: Get 20% off on all courses</p>
+                        <div id="offerCountdown" class="countdown-timer text-primary fw-bold"></div>
+                        <small class="text-muted">*Limited time offer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Categories Section -->
+    <section class="course-categories py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Choose Your Program</h2>
+                <p class="section-subtitle">Select the program that best matches your preparation stage</p>
+            </div>
+            
+            <!-- Foundation Program -->
+            <div class="course-card mb-5">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../images/foundation-course.jpg" alt="Foundation Program" class="img-fluid rounded-start h-100 object-fit-cover">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="card-title text-primary">Foundation Program</h3>
+                                <span class="badge bg-success">Most Popular</span>
+                            </div>
+                            <p class="card-text">Perfect for students starting their JEE preparation journey. Build strong fundamentals and develop problem-solving skills.</p>
+                            <div class="features-list mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Comprehensive study material</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Live online classes</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Weekly doubt clearing sessions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Practice assignments</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Monthly tests</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Performance tracking</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-details d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="text-muted text-decoration-line-through">₹25,000</span>
+                                    <span class="h3 text-primary mb-0 ms-2">₹20,000</span>
+                                    <small class="text-muted">/6 months</small>
+                                </div>
+                                <a href="register.html" class="btn btn-primary btn-lg">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Program -->
+            <div class="course-card mb-5">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../images/advanced-course.jpg" alt="Advanced Program" class="img-fluid rounded-start h-100 object-fit-cover">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="card-title text-primary">Advanced Program</h3>
+                                <span class="badge bg-warning">Advanced</span>
+                            </div>
+                            <p class="card-text">Designed for students who have completed basic preparation and want to focus on advanced topics and problem-solving techniques.</p>
+                            <div class="features-list mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Advanced study material</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>One-on-one mentoring</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Daily doubt resolution</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Previous year papers</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Mock tests</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Personalized feedback</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-details d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="text-muted text-decoration-line-through">₹35,000</span>
+                                    <span class="h3 text-primary mb-0 ms-2">₹28,000</span>
+                                    <small class="text-muted">/6 months</small>
+                                </div>
+                                <a href="register.html" class="btn btn-primary btn-lg">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crash Course -->
+            <div class="course-card mb-5">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../images/crash-course.jpg" alt="Crash Course" class="img-fluid rounded-start h-100 object-fit-cover">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="card-title text-primary">Crash Course</h3>
+                                <span class="badge bg-danger">Intensive</span>
+                            </div>
+                            <p class="card-text">Intensive 3-month program for last-minute preparation. Focus on important topics and exam strategies.</p>
+                            <div class="features-list mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Concise study material</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Daily live classes</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>24/7 doubt support</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Important formulas</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Daily practice tests</li>
+                                            <li><i class="fas fa-check-circle text-success me-2"></i>Exam tips & tricks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-details d-flex justify-content-between align-items-center">
+                                <div class="price">
+                                    <span class="text-muted text-decoration-line-through">₹20,000</span>
+                                    <span class="h3 text-primary mb-0 ms-2">₹16,000</span>
+                                    <small class="text-muted">/3 months</small>
+                                </div>
+                                <a href="register.html" class="btn btn-primary btn-lg">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Features Section -->
+    <section class="course-features py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What's Included in Every Program</h2>
+                <p class="section-subtitle">All our programs come with these essential features to ensure your success</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>Live Online Classes</h4>
+                        <p>Interactive sessions with experienced mentors who explain concepts clearly and solve doubts in real-time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Study Material</h4>
+                        <p>Comprehensive study notes, practice problems, and solved examples covering the entire JEE syllabus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Progress Tracking</h4>
+                        <p>Regular assessments and detailed analysis to monitor your improvement and identify weak areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Doubt Resolution</h4>
+                        <p>Get your doubts cleared instantly through our dedicated Telegram support groups and doubt sessions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>Practice Tests</h4>
+                        <p>Regular practice tests and mock exams to help you get familiar with the JEE pattern and timing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Access</h4>
+                        <p>Access all study materials and lectures on your mobile device through our Telegram groups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our courses</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="courseFaqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How are the online classes conducted?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#courseFaqAccordion">
+                                <div class="accordion-body">
+                                    Classes are conducted live through our online platform. Students can interact with teachers in real-time, ask questions, and participate in discussions. All sessions are also recorded and available for revision.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Can I switch between programs?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#courseFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you can upgrade or switch to a different program within the first month. The fee difference will be adjusted accordingly.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What happens if I miss a live class?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#courseFaqAccordion">
+                                <div class="accordion-body">
+                                    All live classes are recorded and available for viewing at your convenience. You can also ask questions about the missed class in our doubt resolution sessions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do I access the study materials?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#courseFaqAccordion">
+                                <div class="accordion-body">
+                                    After enrollment, you'll get access to our private Telegram groups where all study materials, lectures, and resources are shared. You can download and access them anytime.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 text-white text-center">
+        <div class="container">
+            <h2 class="mb-3">Ready to Start Your JEE Journey?</h2>
+            <p class="lead mb-4">Join our mentorship program today and take the first step towards your dream IIT.</p>
+            <a href="register.html" class="btn btn-light btn-lg">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="../images/logo.png" alt="JEE Mentorship Logo" height="40" class="mb-3">
+                    <p>Empowering students to achieve their dreams through quality education and personalized mentorship.</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Success Stories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Free Resources</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">JEE Updates</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i>  Education , Knowledge City, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@jeementorship.com</li>
+                    </ul>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Subscribe to newsletter" aria-label="Email for newsletter">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 JEE Mentorship. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle" class="btn btn-sm rounded-circle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize countdown timer for special offer
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the offer end date (7 days from now)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7);
+            startCountdown(endDate, 'offerCountdown');
+        });
+    </script>
+</body>
+</html> 
