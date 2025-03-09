@@ -1,11 +1,12 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
-    initDarkMode();
-    initNavbarScroll();
-    initSmoothScroll();
     initAnimations();
     initCounters();
+    initTestimonialCarousel();
+    initCourseFilters();
+    initNavbarScroll();
+    initSmoothScroll();
     initTooltips();
     initBackToTop();
     
@@ -33,60 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', handleContactForm);
     }
 });
-
-// Dark Mode Toggle
-function initDarkMode() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-    const icon = darkModeToggle.querySelector('i');
-    
-    // Check for saved theme preference or respect OS preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const storedTheme = localStorage.getItem('theme');
-    
-    if (storedTheme === 'dark' || (!storedTheme && prefersDarkScheme.matches)) {
-        body.classList.add('dark-mode');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
-    
-    // Toggle dark mode on button click
-    darkModeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        
-        // Update icon
-        if (body.classList.contains('dark-mode')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-            localStorage.setItem('theme', 'light');
-        }
-        
-        // Add animation to the toggle button
-        this.classList.add('animate__animated', 'animate__rubberBand');
-        setTimeout(() => {
-            this.classList.remove('animate__animated', 'animate__rubberBand');
-        }, 1000);
-    });
-    
-    // Listen for OS theme changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-                body.classList.add('dark-mode');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                body.classList.remove('dark-mode');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-    });
-}
 
 // Navbar scroll effect
 function initNavbarScroll() {
